@@ -4,13 +4,13 @@ import {
     CommandInteractionOptionResolver,
     GuildMember,
     PermissionResolvable
-} from 'discord.js';
-import { ExtendedClient } from '../structures/Client';
+} from "discord.js";
+import { ExtendedClient } from "../structures/Client";
 
 /**
  * {
- *  name: 'commandname',
- * description: 'any description',
+ *  name: "commandname",
+ * description: "any description",
  * run: async({ interaction }) => {
  *
  * }

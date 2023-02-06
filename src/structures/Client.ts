@@ -3,12 +3,12 @@ import {
     Client,
     ClientEvents,
     Collection
-} from 'discord.js';
-import { CommandType } from '../typings/Command';
-import glob from 'glob';
-import { promisify } from 'util';
-import { RegisterCommandsOptions } from '../typings/client';
-import { Event } from './Event';
+} from "discord.js";
+import { CommandType } from "../typings/Command";
+import glob from "glob";
+import { promisify } from "util";
+import { RegisterCommandsOptions } from "../typings/client";
+import { Event } from "./Event";
 
 const globPromise = promisify(glob);
 
@@ -33,7 +33,7 @@ export class ExtendedClient extends Client {
             console.log(`Registering commands to ${guildId}`);
         } else {
             this.application?.commands.set(commands);
-            console.log('Registering global commands');
+            console.log("Registering global commands");
         }
     }
 
@@ -52,7 +52,7 @@ export class ExtendedClient extends Client {
             slashCommands.push(command);
         });
 
-        this.on('ready', () => {
+        this.on("ready", () => {
             this.registerCommands({
                 commands: slashCommands
                 //guildId: process.env.guildId
