@@ -1,5 +1,3 @@
-/config.json
-/guilds.json
-/.data
-/node_modules
-/.env
+dist/
+node_modules/
+.env
